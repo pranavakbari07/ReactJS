@@ -41,8 +41,8 @@ export default function Ring() {
           title={product.title}
           price={product.price}
           rating={product.rating}
-          color={product.color}
-        />
+          color={ product.color}
+        /> 
       ))}
     </div>
   )
