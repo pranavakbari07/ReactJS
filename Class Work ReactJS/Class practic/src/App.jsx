@@ -9,16 +9,14 @@ import UseState from './Components/Hooks/UseState'
 import UseEffect from './Components/Hooks/UseEffect'
 import Events from './Components/Hooks/Events'
 import ConditionalRendering from './Components/Hooks/ConditionalRendering'
+import UseRef from './Components/Hooks/UseRef'
 
 function App() {
   return (
     <>
       <div>
-        {/* <MapFilter name={"Pranav"} subject={"React"} /> */}
-        {/* <UseState /> */}
-        {/* <UseEffect /> */}
-        {/* <Events /> */}
-        <ConditionalRendering />
+        {/* <ConditionalRendering /> */}
+        <UseRef />
        </div>
     </>
   )
