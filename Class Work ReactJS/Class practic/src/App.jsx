@@ -10,13 +10,15 @@ import UseEffect from './Components/Hooks/UseEffect'
 import Events from './Components/Hooks/Events'
 import ConditionalRendering from './Components/Hooks/ConditionalRendering'
 import UseRef from './Components/Hooks/UseRef'
+import Event from './Components/Hooks/Event'
 
 function App() {
   return (
     <>
       <div>
         {/* <ConditionalRendering /> */}
-        <UseRef />
+        {/* <UseRef /> */}
+        <Event  />
        </div>
     </>
   )
