@@ -11,6 +11,7 @@ import Events from './Components/Hooks/Events'
 import ConditionalRendering from './Components/Hooks/ConditionalRendering'
 import UseRef from './Components/Hooks/UseRef'
 import Event from './Components/Hooks/Event'
+import FormHandling from './Components/Hooks/FormHandling'
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <div>
         {/* <ConditionalRendering /> */}
         {/* <UseRef /> */}
-        <Event  />
+        {/* <Event  /> */}
+        <FormHandling />
        </div>
     </>
   )
