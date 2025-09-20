@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 
 export default function FormHandling() {
-  const [formdata, setformdata] = useState({
+  const [formdata, setFormdata] = useState({
+    name: "",
+    subject: "",
+    age: "",
+    address: "",
+    gender: "",
+    city: "",
   });
 
   const [record, setRecord] = useState([]);
 
   const handlechange = (e) => {
-    setformdata({
+    setFormdata({
       ...formdata,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -18,13 +24,13 @@ export default function FormHandling() {
 
     setRecord([...record, formdata]);
 
-    setformdata({
+    setFormdata({
       name: "",
       subject: "",
       age: "",
       address: "",
       gender: "",
-      city: ""
+      city: "",
     });
   };
 
@@ -61,35 +67,30 @@ export default function FormHandling() {
           onChange={handlechange}
           placeholder="Enter Your Address"
         />
-
-        <label>
-          <input
-            type="radio"
-            value="male"
-            name="gender"
-            checked={formdata.gender === "male"}
-            onChange={handlechange}
-          />
-          Male
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="female"
-            name="gender"
-            checked={formdata.gender === "female"}
-            onChange={handlechange}
-          />
-          Female
-        </label>
-
+        <input
+          type="radio"
+          value="male"
+          name="gender"
+          checked={formdata.gender === "male"}
+          onChange={handlechange}
+        />
+        Male
+        <input
+          type="radio"
+          value="female"
+          name="gender"
+          checked={formdata.gender === "female"}
+          onChange={handlechange}
+        />
+        Female
         <select value={formdata.city} name="city" onChange={handlechange}>
-          <option hidden>Select Your City</option>
-          <option>Rajkot</option>
-          <option>Mumbai</option>
-          <option>Delhi</option>
+          <option value="" hidden>
+            Select Your City
+          </option>
+          <option value="Rajkot">Rajkot</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
         </select>
-
         <button type="submit">Submit</button>
       </form>
 
