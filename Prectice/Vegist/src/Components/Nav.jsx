@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Nav() {
+export default function Nav({dark,setDark}) {
   return (
     <>
       <div className="bg-[#232323] text-white font-[600] text-center py-2.5">
@@ -9,7 +9,8 @@ export default function Nav() {
           item
         </h1>
       </div>
-      <nav className="flex items-center">
+      <button onClick={()=>setDark(!dark)}>Loght/Dark</button>
+      <nav style={{backgroundColor: dark ? "black" : "white"}} className="flex items-center">
         <img src="logo-1.svg" alt="" className="w-[120px] h-[60px]" />
         <div className="w-[25%] flex justify-between p-[1.5px] rounded-3xl border-1 border-gray-200">
           <input type="text" placeholder="Search our store" className="ml-3"/>
