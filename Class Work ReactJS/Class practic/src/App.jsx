@@ -1,31 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Home from './Components/Home'
-import Nav from './Components/Nav'
-import MapFilter from './Components/MapFilter'
-import UseState from './Components/Hooks/UseState'
-import UseEffect from './Components/Hooks/UseEffect'
-import Events from './Components/Hooks/Events'
-import ConditionalRendering from './Components/Hooks/ConditionalRendering'
-import UseRef from './Components/Hooks/UseRef'
-import Event from './Components/Hooks/Event'
-import FormHandling from './Components/Hooks/FormHandling'
-import FormHandle from './Components/Hooks/FormHandle'
+import { useState } from "react";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import Nav from "./Components/Nav";
+import FormHandling from "./Components/Hooks/FormHandling";
 
 function App() {
   return (
     <>
-      <div>
-        {/* <ConditionalRendering /> */}
-        {/* <UseRef /> */}
-        {/* <Event  /> */}
+      <BrowserRouter>
         {/* <FormHandling /> */}
-        <FormHandle />
-       </div>
+        <Routes>
+          <Route path="/" Component={Home} />
+          <Route path="/nav" Component={Nav} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
