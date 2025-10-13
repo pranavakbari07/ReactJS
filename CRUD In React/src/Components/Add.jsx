@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Toast,{ toast, Toaster } from "react-hot-toast";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Add() {
@@ -26,41 +27,43 @@ export default function Add() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     let allData = JSON.parse(localStorage.getItem("record")) || [];
 
     if (!locationObj.state) {
       allData.push(formdata);
+      toast.success("Data Add Successfully !");
     } else {
       let singleData = allData.find(
         (item) => item.id == locationObj.state.stid
       );
-
-      if (singleData) {
-        singleData.name = formdata.name;
-        singleData.age = formdata.age;
-      }
+      singleData.name = formdata.name;
+      singleData.age = formdata.age;
     }
-
     localStorage.setItem("record", JSON.stringify(allData));
-    navigate("/");
+    setTimeout(() => {
+      navigate("/");
+    }, 100);
   };
 
   return (
     <div>
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
       <h1>Add</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter your name"
-          value={formdata.name}
+          value={formdata.name || ""}
           name="name"
           onChange={HandleChange}
         />
         <input
           type="text"
           placeholder="Enter your age"
-          value={formdata.age}
+          value={formdata.age || ""}
           name="age"
           onChange={HandleChange}
         />

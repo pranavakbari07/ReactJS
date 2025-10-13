@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Read() {
@@ -14,14 +15,19 @@ export default function Read() {
     let filterData = record.filter((item) => item.id !== id);
     localStorage.setItem("record", JSON.stringify(filterData));
     setRecord(filterData);
+    toast.success("Data Delete Successfully !");
   };
 
   const handleEdit = (id) => {
     navigate("/add", { state: { stid: id } });
+    setTimeout(() => {
+      toast.success("Data Edit Successfully !");
+    }, 2000);
   };
 
   return (
     <div>
+      <Toaster position="top-center" reverseOrder={false} />
       <h1>Read</h1>
       <Link to="/add">
         <button>ADD DATA</button>
