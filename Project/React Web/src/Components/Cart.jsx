@@ -18,8 +18,8 @@ export default function Cart() {
   return (
     <div className="min-h-screen bg-gray-50 p-6 pt-24">
       {cart.length === 0 ? (
-        <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6">
-          <img src="" alt="" />
+        <div className="w-full flex flex-col items-center justify-center text-center">
+          <img src="/Cart.png" alt="" className="w-80" />
           <h1 className="text-3xl font-semibold text-gray-700">
             Cart is Empty
           </h1>

@@ -16,10 +16,10 @@ export default function Cart() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6 pt-24">
+    <div className="min-h-screen bg-gray-50 pt-18.5">
       {record.length === 0 ? (
-        <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6">
-          <img src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" alt="Empty Cart" className="w-32 h-32" />
+        <div className="h-145 flex flex-col items-center justify-center text-center gap-2">
+          <img src="Cart.png" alt="Empty Cart" className="w-75" />
           <h1 className="text-3xl font-semibold text-gray-700">
             Cart is Empty 😢
           </h1>
@@ -32,7 +32,7 @@ export default function Cart() {
         </div>
       ) : (
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-2xl font-bold mb-6">Your Cart 🛒</h1>
+          <h1 className="text-2xl font-bold mb-6 mt-8">Your Cart 🛒</h1>
           <div className="space-y-4">
             {record.map((e, index) => (
               <div

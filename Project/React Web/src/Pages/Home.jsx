@@ -5,24 +5,24 @@ export default function Home() {
   let arr = [
     {
       image: "21.jpg",
-      title: "Jolly LLB 3",
+      title: "Amul Gold",
       weight: "UA16+ | Hindi",
       price: "₹149",
     },
     {
-      image: "21.jpg",
+      image: "22.jpg",
       title: "Mirai",
       weight: "UA16+ | Hindi and 1 more",
       price: "₹149",
     },
     {
-      image: "21.jpg",
+      image: "23.jpg",
       title: "The Bengal Files",
       weight: "A | Hindi",
       price: "₹149",
     },
     {
-      image: "21.jpg",
+      image: "24.jpg",
       title: "Ajey: The Untold Story",
       weight: "UA1+ | Hindi",
       price: "₹149",
